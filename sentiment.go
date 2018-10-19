@@ -31,14 +31,21 @@ func (m Models) SentimentAnalysis(sentence string, lang Language) *Analysis {
 	}
 
 	w := strings.Split(sentence, " ")
+	sum := uint8(0)
+
 	for _, word := range w {
+		p := m[lang].Predict(word)
+
 		analysis.Words = append(analysis.Words, Score{
 			Word:  word,
-			Score: m[lang].Predict(word),
+			Score: p,
 		})
+
+		sum = sum + p
 	}
 
 	analysis.Score = m[lang].Predict(sentence)
+	analysis.Average = float32(sum) / float32(len(w))
 
 	return analysis
 }

@@ -79,4 +79,5 @@ type Analysis struct {
 	Words     []Score         `json:"words"`
 	Sentences []SentenceScore `json:"sentences,omitempty"`
 	Score     uint8           `json:"score"`
+	Average   float32         `json:"average"`
 }
