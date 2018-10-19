@@ -1,3 +1,15 @@
+This is a fork from [cdipaolo/sentiment](https://github.com/cdipaolo/sentiment), with following changes:
+- Removed datasets to reduce size (of docker image)
+- Add average of scrolling for sentense
+
+```go
+// First call model.SentimentAnalysis with your sentence
+analysis := model.SentimentAnalysis("You're mother is an awful lady", sentiment.English)
+
+// Get the average scrolling
+analysis.Average // 0.33333334
+```
+
 ## Sentiment
 #### Simple, Drop In Sentiment Analysis in Golang
 [![GoDoc](https://godoc.org/github.com/cdipaolo/sentiment?status.svg)](https://godoc.org/github.com/cdipaolo/sentiment)
