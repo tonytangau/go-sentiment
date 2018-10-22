@@ -4,10 +4,10 @@ This is a fork from [cdipaolo/sentiment](https://github.com/cdipaolo/sentiment),
 
 ```go
 // First call model.SentimentAnalysis with your sentence
-analysis := model.SentimentAnalysis("You're mother is an awful lady", sentiment.English)
+analysis := model.SentimentAnalysis("You know nothing Jon Snow", sentiment.English)
 
 // Get the average scrolling
-analysis.Average // 0.33333334
+analysis.Average // 0.2
 ```
 
 ## Sentiment
